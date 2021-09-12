@@ -4,5 +4,5 @@ import TopNav from "@/components/TopNav.vue";
 
 <template>
   <TopNav />
-  About Page
+  404 Page Not Found <br />
 </template>

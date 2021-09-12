@@ -1,18 +1,38 @@
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import NotFound from './views/NotFound.vue'
+import Home from "@/views/Home.vue"
+import About from "@/views/About.vue"
+import ReferralJoin from "@/views/ReferralJoin.vue"
+import User from "@/views/User.vue"
+import PageNotFound from "@/views/404.vue"
+import TopNav from "@/components/TopNav.vue"
 
-/** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
-  { path: '/', component: Home, meta: { title: 'Home' } },
-  {
-    path: '/about',
-    meta: { title: 'About' },
-    component: About,
-    // example of route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () => import('./views/About.vue')
+  { 
+    path: "/", 
+    component: Home, 
+    meta: { title: "Home" } 
   },
-  { path: '/:path(.*)', component: NotFound },
-]
+  {
+    path: "/about",
+    component: About,
+    meta: { title: "About" },
+  },
+  {
+    path: "/referral-join",
+    component: ReferralJoin,
+    meta: { title: "Referral-Join" }
+  },
+  {
+    path: "/user",
+    component: User,
+    meta: { title: "User" }
+  },
+  {
+    path: "/top-nav",
+    component: TopNav,
+    meta: { title: "Top-Nav" }
+  },
+  { 
+    path: "/:path(.*)", 
+    component: PageNotFound 
+  },
+];
