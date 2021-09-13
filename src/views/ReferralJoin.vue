@@ -1,5 +1,5 @@
 <script>
-import { ref } from "vue";
+import TopNav from "@/components/TopNav.vue"
 
 import ReferralJoinService from "@/services/ReferralJoinService";
 import UserService from "@/services/UserService";
@@ -63,6 +63,9 @@ export default {
 
   },
 
+  components: {
+    TopNav
+  }
 };
 </script>
 

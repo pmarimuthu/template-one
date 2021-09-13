@@ -1,5 +1,4 @@
 <script>
-import { ref } from "vue";
 
 export default {
   setup(context, props) {
@@ -23,11 +22,20 @@ export default {
   },
 
   methods: {},
+
+  components: {
+    TopNav
+  }
 };
+
+import TopNav from "@/components/TopNav.vue";
+
 </script>
 
 <template>
-  User
+  <TopNav />
+
+  User!!
   <div class="box has-background-info has-text-white m-5">
     <div class="field">Id: {{ user.id }}</div>
     <div class="field">Phone: {{ user.phone }}</div>
